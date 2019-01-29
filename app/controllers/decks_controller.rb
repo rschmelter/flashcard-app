@@ -6,6 +6,13 @@ class DecksController < ApplicationController
         render json: decks
     end
 
+    def show
+        deck = Deck.find(params[:id])
+
+        render json: deck
+
+    end
+
     def create 
         deck = current_user.decks.build(deck_params)
         deck.save

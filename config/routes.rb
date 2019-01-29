@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
 
   resources :users
-  post '/signup', to: 'users#signup'
+  post '/signup', to: 'users#create'
   post '/login', to: 'users#login'
-  get '/logout', to: 'users#logout'
+  get '/logout', to: 'applicaiton#logout'
 
   resources :decks do
     resources :cards

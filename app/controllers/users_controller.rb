@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
     def login 
         user = User.find_by(username: params[:user][:username])
-        if user.password = params[:user][:password]
+        if user && user.password = params[:user][:password]
             render json: current_user
         else 
             render json: {error: 'Failed to Log In'}, status: 400

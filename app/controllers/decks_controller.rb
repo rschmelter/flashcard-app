@@ -1,9 +1,9 @@
 class DecksController < ApplicationController
 
     def index 
-        decks = current_user.decks.all 
-
-        render json: decks
+       decks = current_user.decks.all
+       
+       render json: decks
     end
 
     def show

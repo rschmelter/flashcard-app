@@ -1,7 +1,7 @@
 class DecksController < ApplicationController
 
     def index 
-       decks = current_user.decks.all
+       decks = get_current_user.decks.all
        
        render json: decks
     end
@@ -14,7 +14,9 @@ class DecksController < ApplicationController
     end
 
     def create 
-        deck = current_user.decks.build(deck_params)
+        
+
+        deck = get_current_user.decks.build(deck_params)
         deck.save
 
         render json: deck

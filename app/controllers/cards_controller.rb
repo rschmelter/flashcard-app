@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
 
     def index 
-        deck = current_user.decks.find(params[:deck_id].to_i)
+        deck = get_current_user.decks.find(params[:deck_id].to_i)
         cards = deck.cards.all 
 
         render json: cards
@@ -13,7 +13,7 @@ class CardsController < ApplicationController
     end 
 
     def create
-        deck = current_user.decks.find(params[:deck_id].to_i)
+        deck = get_current_user.decks.find(params[:deck_id].to_i)
         card = deck.cards.build(card_params)
         card.save
 

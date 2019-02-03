@@ -2,16 +2,14 @@ class ApplicationController < ActionController::API
 
 
 private
-    def get_current_user
-       @user = User.find(params[:id])
-        @user
-    end
 
-    def current_user
-        @user
+    def get_current_user 
+        id = request.headers['HTTP_AUTHORIZATION']
+        user = User.find(id)
+        user
 
     end
 
-helper_method :current_user
+helper_method :get_current_user
 
 end

@@ -23,6 +23,11 @@ class SignUp extends Component {
         this.setState(state)
     }
 
+    handleSubmit = event => {
+        event.preventDefault()
+        this.props.signUp(this.state)
+    }
+
 
 
     render() {

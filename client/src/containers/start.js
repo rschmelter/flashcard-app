@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import SignUp from './signup';
+import Login from './login';
 
 class Start extends Component {
     render() {
       return (
 
           <div className="Start">
-            <h1>Hello</h1>
+            <SignUp/>
+            <Login/>
           </div>
 
       );

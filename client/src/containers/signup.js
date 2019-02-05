@@ -17,13 +17,15 @@ class SignUp extends Component {
 
 
 
+
     render() {
       return (
 
           <div className="signup">
             <form onSubmit={this.handleSubmit}>
                     <label>signup</label>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.text}/>
+                <input name="username" placeholder="Username" type="text" onChange={(event) => this.handleChange(event)} value={this.state.username}/>
+                <input name="password" placeholder="Password" type="password" onChange={(event) => this.handleChange(event)} value={this.state.password}/>
                 <input type="submit"/>
             </form>
           </div>
@@ -31,5 +33,7 @@ class SignUp extends Component {
       );
     }
   }
+
+
   
-  export default SignUp;
+  export default  SignUp;

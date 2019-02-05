@@ -15,6 +15,13 @@ class SignUp extends Component {
     }
 
 
+    handleChange = event => {
+        const field = event.target.name
+        let state = this.state
+
+        state[field] = event.target.value
+        this.setState(state)
+    }
 
 
 

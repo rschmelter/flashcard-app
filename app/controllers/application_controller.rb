@@ -23,7 +23,7 @@ class ApplicationController < ActionController::API
         else 
             render json: {error: 'Failed to Log In'}, status: 400
         end
-        binding.pry
+       
 
     end
     private

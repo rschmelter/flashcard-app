@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import Start from './containers/start';
+import Home from './components/home';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Route exact path="/" component={Start}/>
+          <Route exact path="/home" component={Home}/>
         </div>
       </BrowserRouter>
     );

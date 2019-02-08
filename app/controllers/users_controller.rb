@@ -24,6 +24,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        binding.pry
         render json: get_current_user
     end 
 

@@ -27,7 +27,7 @@ class SignUp extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.signUp(this.state)
+        this.props.signUp(this.state, () => this.props.history.push('/home'))
     }
 
 

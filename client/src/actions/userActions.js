@@ -2,7 +2,7 @@
 const baseUrl = 'http://localhost:3001'
 
 
-export const signUp = (user) => {
+export const signUp = (user, callback) => {
     
     let data = {
       method: 'POST',
@@ -27,13 +27,13 @@ export const signUp = (user) => {
             payload: user.current
           })
   
-
+          callback()
         })
         .catch(err => err)
     }
   }
 
-  export const login = (user) => {
+  export const login = (user, callback) => {
     
     let data = {
       method: 'POST',
@@ -58,6 +58,7 @@ export const signUp = (user) => {
             type: 'SET_USER',
             payload: user.current
           })
+          callback()
   
 
         })

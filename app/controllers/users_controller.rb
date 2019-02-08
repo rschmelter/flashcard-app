@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
 
     def create
+
         user = User.new(user_params)
         if user.save
             render json: get_current_user
         else
             render json: {error: 'Failed to Sign Up'}, status: 400
-        else
+        
             
         end
     end

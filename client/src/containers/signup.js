@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
+import { signUp } from '../actions/userActions'
+import { bindActionCreators } from 'redux'
 
 
 class SignUp extends Component {
@@ -46,6 +47,8 @@ class SignUp extends Component {
     }
   }
 
+  const mapDispatchToProps = dispatch => bindActionCreators({
+    signUp }, dispatch)
 
   
-  export default  SignUp;
+  export default  connect(null, mapDispatchToProps)(SignUp);

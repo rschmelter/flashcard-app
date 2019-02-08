@@ -52,6 +52,7 @@ export const signUp = (user) => {
         .then(response => response.json())
         .then(user => {
           sessionStorage.setItem('user', user)
+
   
           dispatch({
             type: 'SET_USER',

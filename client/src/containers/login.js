@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { withRouter, Link } from 'react-router-dom'
 
 
-class SignUp extends Component {
+class Login extends Component {
 
     constructor() {
         super()
@@ -27,7 +27,7 @@ class SignUp extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.signUp(this.state)
+        this.props.login(this.state)
     }
 
 
@@ -52,4 +52,4 @@ class SignUp extends Component {
     login }, dispatch)
 
   
-  export default  withRouter(connect(null, mapDispatchToProps)(login));
+  export default  withRouter(connect(null, mapDispatchToProps)(Login));

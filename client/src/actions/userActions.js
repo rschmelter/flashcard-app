@@ -33,4 +33,35 @@ export const signUp = (user) => {
     }
   }
 
+  export const login = (user) => {
+    
+    let data = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ user })
+    }
+
+  
+  
+    return dispatch => {
+
+      fetch(`${ baseUrl }/login`, data)
+        .then(response => response.json())
+        .then(user => {
+          sessionStorage.setItem('user', user)
+  
+          dispatch({
+            type: 'SET_USER',
+            payload: user.current
+          })
+  
+
+        })
+        .catch(err => err)
+    }
+  }
+
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../actions/userActions'
 import { bindActionCreators } from 'redux'
+import { withRouter, Link } from 'react-router-dom'
 
 
 class SignUp extends Component {
@@ -36,7 +37,7 @@ class SignUp extends Component {
 
           <div className="signup">
             <form onSubmit={this.handleSubmit}>
-                    <label>signup</label>
+                    <label>Sign Up</label>
                 <input name="username" placeholder="Username" type="text" onChange={(event) => this.handleChange(event)} value={this.state.username}/>
                 <input name="password" placeholder="Password" type="password" onChange={(event) => this.handleChange(event)} value={this.state.password}/>
                 <input type="submit"/>
@@ -51,4 +52,4 @@ class SignUp extends Component {
     signUp }, dispatch)
 
   
-  export default  connect(null, mapDispatchToProps)(SignUp);
+  export default  withRouter(connect(null, mapDispatchToProps)(SignUp));

@@ -10,7 +10,7 @@ export const signUp = (user, callback) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ user })
+      body: JSON.stringify(user)
     }
 
   
@@ -21,7 +21,7 @@ export const signUp = (user, callback) => {
         .then(response => response.json())
         .then(user => {
           sessionStorage.setItem('user', user)
-  
+            
           dispatch({
             type: 'SET_USER',
             payload: user.current
@@ -41,7 +41,7 @@ export const signUp = (user, callback) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ user })
+      body: JSON.stringify({user})
     }
 
   
@@ -51,9 +51,8 @@ export const signUp = (user, callback) => {
       fetch(`${ baseUrl }/login`, data)
         .then(response => response.json())
         .then(user => {
-          sessionStorage.setItem('user', user)
-
-  
+          sessionStorage.setItem('user', JSON.stringify({user}))
+          debugger;
           dispatch({
             type: 'SET_USER',
             payload: user.current

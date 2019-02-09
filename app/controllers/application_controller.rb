@@ -17,6 +17,8 @@ class ApplicationController < ActionController::API
 
     def login 
 
+    
+
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.password = params[:user][:password]
             render json: @user

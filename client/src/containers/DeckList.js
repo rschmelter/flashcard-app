@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchUser } from '../actions/userActions'
+import { fetchDecks } from '../actions/deckActions'
 
 
 
 class DeckList extends Component {
     componentWillMount() {
         this.props.fetchUser()
+        this.props.fetchDecks()
         
 
     }
@@ -16,11 +18,14 @@ class DeckList extends Component {
 
 
     render() {
+        debugger;
+        
 
       return (
 
           <div className="DeckList">
             <h1>{this.props.user.username}</h1>
+
           </div>
 
       );
@@ -29,13 +34,15 @@ class DeckList extends Component {
 
   const mapStateToProps = state => {
       return{
-          user: state.user.current
+          user: state.user.current,
+          decks: state.deck.all
 
       }
   }
 
   const mapDispatchToProps = dispatch => bindActionCreators({
-      fetchUser
+      fetchUser,
+      fetchDecks
   }, dispatch)
 
 

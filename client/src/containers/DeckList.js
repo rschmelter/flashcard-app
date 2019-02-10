@@ -15,11 +15,13 @@ class DeckList extends Component {
 
 
     render() {
-        debugger;
+        
+
+
       return (
 
           <div className="DeckList">
-
+     
           </div>
 
       );
@@ -28,7 +30,7 @@ class DeckList extends Component {
 
   const mapStateToProps = state => {
       return{
-          user: state.user.current,
+          user: state.user.current
 
       }
   }

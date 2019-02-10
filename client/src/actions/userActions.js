@@ -56,7 +56,7 @@ export const signUp = (user, callback) => {
 
           dispatch({
             type: 'SET_USER',
-            payload: user.current
+            payload: user
           })
           callback()
   
@@ -86,12 +86,13 @@ export const signUp = (user, callback) => {
 
       fetch(`${ baseUrl }/users/${id}`, data)
         .then(response => response.json())
-        .then(user => {
+        .then(user => { 
           sessionStorage.setItem('user', JSON.stringify(user))
 
           dispatch({
             type: 'SET_USER',
-            payload: user.current
+            payload: user
+            
           })
   
   

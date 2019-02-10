@@ -15,13 +15,11 @@ class DeckList extends Component {
 
 
     render() {
-        
-
 
       return (
 
           <div className="DeckList">
-     
+            <h1>{this.props.user.username}</h1>
           </div>
 
       );

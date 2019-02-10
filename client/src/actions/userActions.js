@@ -75,7 +75,7 @@ export const signUp = (user, callback) => {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': sessionStorage.getItem('user')
+        'Authorization': id
       },
 
     }

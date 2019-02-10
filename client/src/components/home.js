@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DeckForm from '../containers/DeckForm'
+import DeckList from '../containers/DeckList'
 
 class Home extends Component {
   render() {
@@ -7,9 +8,10 @@ class Home extends Component {
     return (
       
         <div className="Home">
-          {sessionStorage.getItem('user')}
+          
             <h1>Hello</h1>
             <DeckForm/>
+            <DeckList/>
         </div>
 
     );

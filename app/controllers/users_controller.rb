@@ -13,10 +13,11 @@ class UsersController < ApplicationController
     end
 
     def login 
-  
-        user = User.find_by(username: params[:user][:username])
-        if user && user.password = params[:user][:password]
-            binding.pry
+        
+     
+        user = User.find_by(username: params[:username])
+        if user && user.password = params[:password]
+
             render json: user
           
         else 
@@ -26,8 +27,9 @@ class UsersController < ApplicationController
     end
 
     def show
-        binding.pry
-        render json: get_current_user
+  
+        user = User.find(params[:id])
+        render json: user
     end 
 
 private

@@ -41,7 +41,7 @@ export const signUp = (user, callback) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({user})
+      body: JSON.stringify(user)
     }
 
   
@@ -51,7 +51,8 @@ export const signUp = (user, callback) => {
       fetch(`${ baseUrl }/login`, data)
         .then(response => response.json())
         .then(user => {
-          sessionStorage.setItem('user', JSON.stringify({user}))
+          sessionStorage.setItem('user', JSON.stringify(user))
+
 
           dispatch({
             type: 'SET_USER',
@@ -66,7 +67,9 @@ export const signUp = (user, callback) => {
   }
 
   export const fetchUser = () => {
+    let parse = JSON.parse(sessionStorage.getItem('user'))
     
+    let id = parse.id
     let data = {
       method: 'GET',
       headers: {
@@ -81,7 +84,7 @@ export const signUp = (user, callback) => {
   
     return dispatch => {
 
-      fetch(`${ baseUrl }/login`, data)
+      fetch(`${ baseUrl }/users/${id}`, data)
         .then(response => response.json())
         .then(user => {
           sessionStorage.setItem('user', JSON.stringify({user}))

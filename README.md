@@ -25,7 +25,7 @@ Things you may want to cover:
 test
 Test
 
-
+<!-- JSON.parse(sessionStorage.getItem('user'))["user"]["id"] -->
 
 <!-- 
 

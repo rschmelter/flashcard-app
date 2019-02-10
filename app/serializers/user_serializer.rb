@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-    attributes :username, :password
+    attributes :id, :username, :password
 
     has_many :decks
 

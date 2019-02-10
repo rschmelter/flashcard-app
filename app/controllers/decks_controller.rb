@@ -15,7 +15,7 @@ class DecksController < ApplicationController
 
     def create 
         
-
+        
         deck = get_current_user.decks.build(deck_params)
         deck.save
 

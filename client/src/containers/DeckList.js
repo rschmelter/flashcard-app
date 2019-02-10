@@ -8,6 +8,7 @@ import { fetchUser } from '../actions/userActions'
 class DeckList extends Component {
     componentWillMount() {
         this.props.fetchUser()
+        
 
     }
 

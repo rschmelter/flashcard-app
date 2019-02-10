@@ -26,7 +26,7 @@ class DeckForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.login(this.state)
+        this.props.createDeck(this.state)
     }
 
 

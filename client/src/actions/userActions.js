@@ -52,7 +52,7 @@ export const signUp = (user, callback) => {
         .then(response => response.json())
         .then(user => {
           sessionStorage.setItem('user', JSON.stringify({user}))
-          debugger;
+
           dispatch({
             type: 'SET_USER',
             payload: user.current
@@ -64,5 +64,42 @@ export const signUp = (user, callback) => {
         .catch(err => err)
     }
   }
+
+  export const fetchUser = () => {
+    
+    let data = {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': sessionStorage.getItem('user')
+      },
+
+    }
+
+  
+  
+    return dispatch => {
+
+      fetch(`${ baseUrl }/login`, data)
+        .then(response => response.json())
+        .then(user => {
+          sessionStorage.setItem('user', JSON.stringify({user}))
+          debugger;
+          dispatch({
+            type: 'SET_USER',
+            payload: user.current
+          })
+  
+  
+
+        })
+        .catch(err => err)
+    }
+  }
+
+
+
+
 
 

@@ -1,5 +1,5 @@
 class DeckSerializer < ActiveModel::Serializer
-    attributes :name, :count
+    attributes :id, :name, :count
 
     belongs_to :user
     has_many :cards

@@ -1,5 +1,5 @@
 class CardSerializer < ActiveModel::Serializer
-    attributes :front, :back, :difficulty
+    attributes :id, :front, :back, :difficulty
 
     belongs_to :deck
 

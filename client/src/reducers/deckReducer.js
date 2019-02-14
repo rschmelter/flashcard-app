@@ -11,7 +11,6 @@ export default function deckReducer(state = initialState, action) {
 
         case 'FETCH_DECKS':
 
-            debugger;
         return {...state, all: action.payload}
             
      

@@ -11,7 +11,6 @@ class DeckList extends Component {
         this.props.fetchUser()
         this.props.fetchDecks()
         
-
     }
 
 
@@ -20,13 +19,13 @@ class DeckList extends Component {
     render() {
         const user = this.props.user
         const decks = this.props.decks
-        debugger;
+       
 
       return (
 
           <div className="DeckList">
             <h1>{user.username}</h1>
-
+            {decks.map(deck => <Deck key={deck.id} deck={deck.name}/>)}
           </div>
 
       );

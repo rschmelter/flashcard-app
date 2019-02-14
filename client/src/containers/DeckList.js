@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchUser } from '../actions/userActions'
 import { fetchDecks } from '../actions/deckActions'
+import Deck from '../components/Deck'
 
 
 

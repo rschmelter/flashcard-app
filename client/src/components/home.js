@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DeckForm from '../containers/DeckForm'
 import DeckList from '../containers/DeckList'
+import Deck from './Deck'
 
 class Home extends Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends Component {
             <h1>Hello</h1>
             <DeckForm/>
             <DeckList/>
+            <Deck/>
         </div>
 
     );

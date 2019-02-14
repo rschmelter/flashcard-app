@@ -54,3 +54,29 @@ export const signUp = user => {
 sessionStorage.removeItem('user')
 
 if(sessionStorage.getItem('user')) return <component/> -->
+
+
+
+
+
+
+<!-- import update from 'immutability-helper';
+
+const initialState = {
+    current: {},
+    all: []
+}
+
+export default function deckReducer(state = initialState, action) {
+  
+    switch(action.type) {
+        case 'CREATE_DECK':
+            return update(state, {all : {$push : [action.payload]}})
+
+        case 'FETCH_DECKS':
+
+            return update(state, {all: {$set : action.payload}})
+     
+        default: return state
+    }
+} -->

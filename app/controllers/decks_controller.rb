@@ -2,6 +2,7 @@ class DecksController < ApplicationController
 
     def index 
        decks = get_current_user.decks.all
+
   
        render json: decks
     end

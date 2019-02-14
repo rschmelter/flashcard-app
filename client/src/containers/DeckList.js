@@ -18,7 +18,7 @@ class DeckList extends Component {
 
 
     render() {
-    debugger;        
+     
 
       return (
 

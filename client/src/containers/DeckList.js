@@ -20,7 +20,7 @@ class DeckList extends Component {
     render() {
         const user = this.props.user
         const decks = this.props.decks
- 
+        debugger;
 
       return (
 

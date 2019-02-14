@@ -3,7 +3,7 @@ class DecksController < ApplicationController
     def index 
        decks = get_current_user.decks
 
-        binding.pry
+        
        render json: decks
     end
 

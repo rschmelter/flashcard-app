@@ -7,7 +7,7 @@ import { fetchDecks } from '../actions/deckActions'
 
 
 class DeckList extends Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchUser()
         this.props.fetchDecks()
         
@@ -18,12 +18,14 @@ class DeckList extends Component {
 
 
     render() {
-     
+        const user = this.props.user
+        const decks = this.props.user.decks
+        debugger;
 
       return (
 
           <div className="DeckList">
-            <h1>{this.props.user.username}</h1>
+            <h1>{user.username}</h1>
 
           </div>
 
@@ -35,6 +37,7 @@ class DeckList extends Component {
       return{
           user: state.user.current,
           decks: state.deck.all
+          
 
       }
   }

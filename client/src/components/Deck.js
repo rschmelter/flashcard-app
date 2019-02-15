@@ -8,7 +8,7 @@ class Deck extends Component {
     
       
         <div className="Deck">
-            {this.props.deck}
+            <h2>{this.props.deck}</h2>
         </div>
 
     );

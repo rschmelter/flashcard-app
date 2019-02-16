@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { createCard } from '../actions/deckActions'
+import { createCard } from '../actions/cardActions'
 import { bindActionCreators } from 'redux'
 
 
@@ -33,8 +33,10 @@ class CardForm extends Component {
 
 
     render() {
+     
       return (
 
+       
           <div className="CardForm">
             <form onSubmit={this.handleSubmit}>
                     <label>Create Card</label>
@@ -48,8 +50,13 @@ class CardForm extends Component {
     }
   }
 
-  const mapDispatchToProps = dispatch => bindActionCreators({
-    createCard }, dispatch)
+  const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        fetchCards: () => {
+            dispatch(createCard(ownProps.deckId))
+        }
+    }
+}
 
   
   export default  connect(null, mapDispatchToProps)(CardForm);

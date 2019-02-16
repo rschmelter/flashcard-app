@@ -26,3 +26,7 @@ export const fetchCards = id => {
     }
 
 }
+
+export const createCard = id => {
+    
+}

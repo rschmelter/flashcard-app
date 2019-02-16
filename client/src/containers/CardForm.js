@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { createDeck } from '../actions/deckActions'
+import { createCard } from '../actions/deckActions'
 import { bindActionCreators } from 'redux'
 
 
 
-class DeckForm extends Component {
+class CardForm extends Component {
 
     constructor() {
         super()
 
         this.state = {
-            name: ""
+            front: "",
+            back: ""
         };
     }
 
@@ -26,7 +27,7 @@ class DeckForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.createDeck(this.state)
+        this.props.createCard(this.state)
     }
 
 
@@ -34,10 +35,11 @@ class DeckForm extends Component {
     render() {
       return (
 
-          <div className="DeckForm">
+          <div className="CardForm">
             <form onSubmit={this.handleSubmit}>
-                    <label>Create Deck</label>
-                <input name="name" placeholder="Name" type="text" onChange={(event) => this.handleChange(event)} value={this.state.name}/>
+                    <label>Create Card</label>
+                <input name="Front" placeholder="Question" type="text" onChange={(event) => this.handleChange(event)} value={this.state.front}/>
+                <input name="Back" placeholder="Answer" type="text" onChange={(event) => this.handleChange(event)} value={this.state.back}/>
                 <input type="submit"/>
             </form>
           </div>
@@ -47,7 +49,7 @@ class DeckForm extends Component {
   }
 
   const mapDispatchToProps = dispatch => bindActionCreators({
-    createDeck }, dispatch)
+    createCard }, dispatch)
 
   
-  export default  connect(null, mapDispatchToProps)(DeckForm);
+  export default  connect(null, mapDispatchToProps)(CardForm);

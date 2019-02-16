@@ -24,7 +24,15 @@ class CardList extends Component {
   }
 }
 
+const mapStateToProps = state => {
+    return{
+        cards: state.cards.all
+        
+
+    }
+}
 
 
 
-export default CardList;
+
+export default  connect(mapStateToProps, {fetchCards()})(CardList);

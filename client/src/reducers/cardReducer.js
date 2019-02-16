@@ -10,6 +10,7 @@ export default function cardReducer(state = initialState, action) {
             return {...state, all: [...state.all, action.payload]}
 
         case 'FETCH_CARDS':
+    
 
         return {...state, all: action.payload}
             

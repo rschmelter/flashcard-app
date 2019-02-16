@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+
+import { fetchCards } from '../actions/cardActions'
 
 
 class CardList extends Component {
@@ -11,7 +12,8 @@ class CardList extends Component {
     }
 
   render() {
-   
+
+   debugger;
     return (
     
       
@@ -26,7 +28,7 @@ class CardList extends Component {
 
 const mapStateToProps = state => {
     return{
-        cards: state.cards.all
+        cards: state.card.all
         
 
     }
@@ -35,4 +37,5 @@ const mapStateToProps = state => {
 
 
 
-export default  connect(mapStateToProps, {fetchCards()})(CardList);
+
+export default  connect(mapStateToProps, {fetchCards})(CardList);

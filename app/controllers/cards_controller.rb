@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
 
     def index 
-        binding.pry
+    
         deck = Deck.find(params[:deck_id].to_i)
         cards = deck.cards.all 
 

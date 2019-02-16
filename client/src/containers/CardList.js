@@ -14,7 +14,7 @@ class CardList extends Component {
     }
 
   render() {
-
+    debugger;
  
     return (
     

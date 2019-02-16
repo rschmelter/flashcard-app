@@ -2,10 +2,10 @@ class CardsController < ApplicationController
 
     def index 
         binding.pry
-        # deck = get_current_user.decks.find(params[:deck_id].to_i)
-        # cards = deck.cards.all 
+        deck = Deck.find(params[:deck_id].to_i)
+        cards = deck.cards.all 
 
-        # render json: cards
+        render json: cards
     end
 
     def show

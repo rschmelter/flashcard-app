@@ -12,7 +12,7 @@ export const fetchCards = id => {
             'Authorization': userId
         }
     }
-   
+
     return dispatch => {
         fetch(`${baseUrl}/decks/${id}/cards`, data)
         .then(response => response.json())

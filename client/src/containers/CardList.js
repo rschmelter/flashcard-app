@@ -7,13 +7,15 @@ import { fetchCards } from '../actions/cardActions'
 class CardList extends Component {
     
     componentDidMount() {
-        fetchCards(this.props.deckId)
+       
+    
+        this.props.fetchCards()
         
     }
 
   render() {
 
-   debugger;
+ 
     return (
     
       
@@ -34,10 +36,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         fetchCards: () => {
-            dispatch(fetchCards())
+            dispatch(fetchCards(ownProps.deckId))
         }
     }
 }

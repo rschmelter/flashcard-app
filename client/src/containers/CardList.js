@@ -34,8 +34,15 @@ const mapStateToProps = state => {
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchCards: () => {
+            dispatch(fetchCards())
+        }
+    }
+}
 
 
 
 
-export default  connect(mapStateToProps, {fetchCards})(CardList);
+export default  connect(mapStateToProps, mapDispatchToProps)(CardList);

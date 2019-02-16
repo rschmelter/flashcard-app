@@ -5,6 +5,7 @@ import Deck from './Deck'
 
 class Home extends Component {
   render() {
+    debugger;
    
     return (
     
@@ -12,8 +13,8 @@ class Home extends Component {
         <div className="Home">
           
             <h1>Hello</h1>
-            <DeckForm/>
             <DeckList/>
+            <DeckForm/>            
             <Deck/>
         </div>
 

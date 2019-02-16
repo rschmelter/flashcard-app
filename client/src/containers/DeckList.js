@@ -25,7 +25,8 @@ class DeckList extends Component {
       return (
 
           <div className="DeckList">
-          
+        
+          <h1>{user.username}</h1>
             {decks.map(deck => <Deck deckId={deck.id} deck={deck.name}/>)}
           </div>
 

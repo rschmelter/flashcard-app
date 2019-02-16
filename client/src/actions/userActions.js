@@ -24,7 +24,7 @@ export const signUp = (user, callback) => {
             
           dispatch({
             type: 'SET_USER',
-            payload: user.current
+            payload: user
           })
   
           callback()

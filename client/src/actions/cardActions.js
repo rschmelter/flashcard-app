@@ -27,6 +27,28 @@ export const fetchCards = id => {
 
 }
 
-export const createCard = id => {
+export const createCard = (id, card) => {
+    let data = {
+        method: 'POST',
+        headers: {
+            'Accept': 'application.json',
+            'Content-Type': 'application/json',
+          
+        },
+        body: JSON.stringify(card)
+    }
+
+    return dispatch => {
+        fetch(`${baseUrl}/decks/${id}/cards`, data)
+        .then(response => response.json())
+        .then(card => {
+            dispatch({
+                type: 'CREATE_CARD',
+                payload: card
+            })
+        })
+        .catch(err => err)
+    }
     
+
 }

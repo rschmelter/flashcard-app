@@ -14,6 +14,7 @@ class CardsController < ApplicationController
     end 
 
     def create
+        binding.pry
         deck = Deck.find(params[:deck_id].to_i)
         card = deck.cards.build(card_params)
         card.save

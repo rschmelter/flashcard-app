@@ -27,7 +27,7 @@ class CardForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.createCard(this.state)
+        this.props.createCard(this.props.deckId, this.state)
     }
 
 
@@ -40,8 +40,8 @@ class CardForm extends Component {
           <div className="CardForm">
             <form onSubmit={this.handleSubmit}>
                     <label>Create Card</label>
-                <input name="Front" placeholder="Question" type="text" onChange={(event) => this.handleChange(event)} value={this.state.front}/>
-                <input name="Back" placeholder="Answer" type="text" onChange={(event) => this.handleChange(event)} value={this.state.back}/>
+                <input name="front" placeholder="Question" type="text" onChange={(event) => this.handleChange(event)} value={this.state.front}/>
+                <input name="back" placeholder="Answer" type="text" onChange={(event) => this.handleChange(event)} value={this.state.back}/>
                 <input type="submit"/>
             </form>
           </div>
@@ -50,13 +50,8 @@ class CardForm extends Component {
     }
   }
 
-  const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-        fetchCards: () => {
-            dispatch(createCard(ownProps.deckId))
-        }
-    }
-}
+  const mapDispatchToProps = dispatch => bindActionCreators({
+    createCard }, dispatch)
 
   
   export default  connect(null, mapDispatchToProps)(CardForm);

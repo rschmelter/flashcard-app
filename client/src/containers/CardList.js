@@ -14,13 +14,12 @@ class CardList extends Component {
     }
 
   render() {
-    debugger;
- 
+    const cards = this.props.cards
     return (
     
       
         <div className="CardList">
-
+        {cards.map(card => <Deck cardId={card.id} front={card.front} back={card.back}/>)}
             
         </div>
 

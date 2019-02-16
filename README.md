@@ -22,10 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-test
 Test
-Test
-TEST
 
 <!-- JSON.parse(sessionStorage.getItem('user'))["user"]["id"] -->
 

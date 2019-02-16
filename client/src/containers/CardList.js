@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { fetchCards } from '../actions/cardActions'
+import Card from '../components/Card'
 
 
 class CardList extends Component {
@@ -19,7 +20,7 @@ class CardList extends Component {
     
       
         <div className="CardList">
-        {cards.map(card => <Deck cardId={card.id} front={card.front} back={card.back}/>)}
+        {cards.map(card => <Card cardId={card.id} front={card.front} back={card.back}/>)}
             
         </div>
 

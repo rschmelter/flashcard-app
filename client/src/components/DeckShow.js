@@ -8,13 +8,11 @@ class Deck extends Component {
     
       
         <div className="Deck">
-            <h2>{this.props.deckId}</h2>
-            <h2>{this.props.deck}</h2>
-            <Link to={`/decks/${this.props.deckId}`}><h2>{this.props.deck}</h2></Link>
+            <h1>Hello</h1>
         </div>
 
     );
   }
 }
 
-export default Deck;
+export default DeckShow;

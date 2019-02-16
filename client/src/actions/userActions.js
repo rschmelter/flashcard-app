@@ -20,7 +20,7 @@ export const signUp = (user, callback) => {
       fetch(`${ baseUrl }/signup`, data)
         .then(response => response.json())
         .then(user => {
-          sessionStorage.setItem('user', user)
+          sessionStorage.setItem('user', JSON.stringify(user))
             
           dispatch({
             type: 'SET_USER',

@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import Start from './containers/start';
 import Home from './components/home';
+import DeckShow from './components/DeckShow';
 
 class App extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Deck extends Component {
+class DeckShow extends Component {
   render() {
 
     return (

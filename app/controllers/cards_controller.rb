@@ -14,7 +14,7 @@ class CardsController < ApplicationController
     end 
 
     def create
-        deck = get_current_user.decks.find(params[:deck_id].to_i)
+        deck = Deck.find(params[:deck_id].to_i)
         card = deck.cards.build(card_params)
         card.save
 
@@ -32,7 +32,7 @@ class CardsController < ApplicationController
     private
 
     def card_params
-        params.require(:card).permit(:front, :back, :difficulty, :dek_id)
+        params.require(:card).permit(:front, :back, :difficulty, :deck_id)
 
     end 
 

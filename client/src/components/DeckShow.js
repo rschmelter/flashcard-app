@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import CardList from '../containers/CardList'
 
 class DeckShow extends Component {
   render() {
@@ -8,7 +9,7 @@ class DeckShow extends Component {
     
       
         <div className="Deck">
-            <h1>Hello</h1>
+            <CardList deckId={this.props.match.params.id}/>
         </div>
 
     );

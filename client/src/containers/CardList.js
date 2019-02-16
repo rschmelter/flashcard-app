@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
 
 class CardList extends Component {
-  render() {
+    
+    componentDidMount() {
+        fetchCards(this.props.deckId)
+        
+    }
 
+  render() {
+   
     return (
     
       
@@ -15,5 +23,8 @@ class CardList extends Component {
     );
   }
 }
+
+
+
 
 export default CardList;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Redirect, Link, Route} from 'react-router-dom';
 import './App.css';
 import Start from './containers/start';
 import Home from './components/home';
@@ -11,13 +11,23 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+        <Switch id="routes">
           <Route exact path="/" component={Start}/>
           <Route exact path="/home" component={Home}/>
           <Route path="/decks/:id" component={DeckShow}/>
+          <Route path="/logout" component={() => logout()}/>
+        </Switch>
         </div>
       </BrowserRouter>
     );
   }
+}
+
+const loggedIn = () => !!sessionStorage('user')
+
+const logout = () => {
+  if(sessionStorage('user')) sessionStorage.removeItem('user')
+  return <Redirect to="/login"/>
 }
 
 export default App;

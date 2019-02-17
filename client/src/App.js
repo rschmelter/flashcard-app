@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
         <Switch id="routes">
           <Route exact path="/" component={Start}/>
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/home" component={ () => loggedIn() ? <Home/> : <Redirect to="/start"/>}/>
           <Route path="/decks/:id" component={DeckShow}/>
           <Route path="/logout" component={() => logout()}/>
         </Switch>
@@ -23,11 +23,11 @@ class App extends Component {
   }
 }
 
-const loggedIn = () => !!sessionStorage('user')
+const loggedIn = () => !!sessionStorage['user']
 
 const logout = () => {
-  if(sessionStorage('user')) sessionStorage.removeItem('user')
-  return <Redirect to="/login"/>
+  if(sessionStorage['user']) sessionStorage.removeItem('user')
+  return <Redirect to="/"/>
 }
 
 export default App;

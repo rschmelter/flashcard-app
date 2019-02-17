@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SignUp from './signup';
-import Login from './login';
+import SignUp from '../containers/signup';
+import Login from '../containers/login';
 
 class Start extends Component {
     render() {

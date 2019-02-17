@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {BrowserRouter, Switch, Redirect, Link, Route} from 'react-router-dom';
 import './App.css';
-import Start from './containers/start';
+import Start from './components/start';
 import Home from './components/home';
 import DeckShow from './components/DeckShow';
 

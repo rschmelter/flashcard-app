@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
         <Switch id="routes">
           <Route exact path="/" component={Start}/>
-          <Route exact path="/home" component={ () => loggedIn() ? <Home/> : <Redirect to="/start"/>}/>
+          <Route exact path="/home" component={ () => loggedIn() ? <Home/> : <Redirect to="/"/>}/>
           <Route path="/decks/:id" component={DeckShow}/>
           <Route path="/logout" component={() => logout()}/>
         </Switch>

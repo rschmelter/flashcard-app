@@ -28,6 +28,10 @@ class CardForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.createCard(this.props.deckId, this.state)
+        this.setState({
+            front: "",
+            back: ""
+        })
     }
 
 

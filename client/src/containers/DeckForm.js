@@ -27,6 +27,9 @@ class DeckForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.createDeck(this.state)
+        this.setState({
+            name: ""
+        })
     }
 
 

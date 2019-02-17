@@ -8,7 +8,8 @@ class Header extends Component {
     
       
         <div className="Header">
-            
+            <Link to={"/home"}><h2>Home</h2></Link>
+            <Link to={"/logout"}><h2>Logout</h2></Link>
             
         </div>
 

@@ -13,8 +13,8 @@ class Home extends Component {
         <div className="Home">
           
             <h1>Hello</h1>
-            <DeckList/>
-            <DeckForm/>            
+            <DeckForm/>   
+            <DeckList/>                     
             <Deck/>
         </div>
 

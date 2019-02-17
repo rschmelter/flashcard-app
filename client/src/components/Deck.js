@@ -7,10 +7,10 @@ class Deck extends Component {
     return (
     
       
-        <div className="Deck">
+        
 
-            <Link to={`/decks/${this.props.deckId}`}><h2>{this.props.deck}</h2></Link>
-        </div>
+            <h3 className="Deck"><Link to={`/decks/${this.props.deckId}`}>{this.props.deck}</Link></h3>
+        
 
     );
   }

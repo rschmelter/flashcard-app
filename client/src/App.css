@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -30,3 +31,23 @@
     transform: rotate(360deg);
   }
 }
+.Deck {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+h1 {
+  display: inline-block;
+  margin: 25px;
+}
+
+
+.Card {
+  
+  border: 1px solid black;
+  margin: 10px;
+  
+}
+

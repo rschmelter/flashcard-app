@@ -11,8 +11,8 @@ class DeckShow extends Component {
     
       
         <div className="Deck">
-            <CardList deckId={this.props.match.params.id}/>
             <CardForm deckId={this.props.match.params.id}/>
+            <CardList deckId={this.props.match.params.id}/>
             <Card/>
         </div>
 

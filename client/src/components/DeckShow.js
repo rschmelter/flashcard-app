@@ -11,7 +11,7 @@ class DeckShow extends Component {
     return (
     
       
-        <div className="Deck">
+        <div className="DeckShow">
             <Header/>
             <CardForm deckId={this.props.match.params.id}/>
             <CardList deckId={this.props.match.params.id}/>

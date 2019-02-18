@@ -21,8 +21,8 @@ class Card extends Component {
         <div className="Card" onClick={this.handleClick}>
           {
             this.state.front
-            ? <h1>{this.props.front}</h1>
-            : <h1>{this.props.back}</h1>
+            ? <h1 className="Front">{this.props.front}</h1>
+            : <h1 className="Back">{this.props.back}</h1>
           }
         </div>
 

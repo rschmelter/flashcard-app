@@ -43,11 +43,24 @@ h1 {
   margin: 25px;
 }
 
+.DeckShow {
+  width: 100%;
+}
 
 .Card {
-  
+  height: 200px;
+  width: 40%;
   border: 1px solid black;
-  margin: 10px;
+  margin: 2%;
+  display: inline-block;
+  background-color: antiquewhite;
   
 }
 
+.Front {
+  color: blue;
+}
+
+.Back {
+  color: tomato;
+}

@@ -7,6 +7,7 @@ import Deck from '../components/Deck'
 
 
 
+
 class DeckList extends Component {
     componentDidMount() {
         this.props.fetchUser()
@@ -26,8 +27,8 @@ class DeckList extends Component {
 
           <div className="DeckList">
         
-          
-            {decks.map(deck => <Deck deckId={deck.id} deck={deck.name}/>)}
+            
+            {decks.map(deck => <Deck key={deck.id} deckId={deck.id} deck={deck.name}/>)}
           </div>
 
       );

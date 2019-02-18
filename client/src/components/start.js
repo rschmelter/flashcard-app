@@ -7,7 +7,10 @@ class Start extends Component {
       return (
 
           <div className="Start">
+            <h1>Flashcards</h1>
+            <h2>Sign Up</h2>
             <SignUp/>
+            <h2>Or Login</h2>
             <Login/>
           </div>
 

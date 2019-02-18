@@ -6,14 +6,13 @@ import Header from './Header'
 
 class Home extends Component {
   render() {
-    debugger;
+  
    
     return (
     
       
         <div className="Home">
             <Header/>
-            <h1>Hello</h1>
             <DeckForm/>   
             <DeckList/>                     
             <Deck/>

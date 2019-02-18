@@ -20,7 +20,7 @@ class CardList extends Component {
     
       
         <div className="CardList">
-        {cards.map(card => <Card cardId={card.id} front={card.front} back={card.back}/>)}
+        {cards.map(card => <Card key={card.id} cardId={card.id} front={card.front} back={card.back}/>)}
             
         </div>
 

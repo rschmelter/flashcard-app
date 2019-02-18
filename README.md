@@ -1,81 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Introduction
+This is my first React-Redux application. It was built using a Rails API to persist flashcard decks and cards.
 
-* Ruby version
+#Installation
+Fork the repository. Then bundle install, rake db:migrate, and npm install. For the time being the Rails anc Client servers need to be run on different ports.
 
-* System dependencies
+#Contributors Guide
+This was an educational project, and I appreciate any feedback or submission for pull requests.
 
-* Configuration
+#Licensing
+This project has been licensed under the MIT open source license.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Test
-TEST
-
-<!-- JSON.parse(sessionStorage.getItem('user'))["user"]["id"] -->
-
-<!-- 
-
-export const signUp = user => {
-    return dispatch => {
-        return fetch(`${baseUrl}/signup`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        })
-        .then(response => response.json())
-        .then(user => {
-            sessionStorage.setItem(user.id, user)
-            dispatch({
-                type: 'SET_USER',
-                payload: user.current
-            })
-        })
-    }
-} -->
-
-<!-- sessionStorage.getItem('user')
-sessionStorage.removeItem('user')
-
-if(sessionStorage.getItem('user')) return <component/> -->
-
-
-
-
-
-
-<!-- import update from 'immutability-helper';
-
-const initialState = {
-    current: {},
-    all: []
-}
-
-export default function deckReducer(state = initialState, action) {
-  
-    switch(action.type) {
-        case 'CREATE_DECK':
-            return update(state, {all : {$push : [action.payload]}})
-
-        case 'FETCH_DECKS':
-
-            return update(state, {all: {$set : action.payload}})
-     
-        default: return state
-    }
-} -->

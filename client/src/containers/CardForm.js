@@ -46,7 +46,7 @@ class CardForm extends Component {
                     <label>Create Card</label>
                 <input name="front" placeholder="Question" type="text" onChange={(event) => this.handleChange(event)} value={this.state.front}/>
                 <input name="back" placeholder="Answer" type="text" onChange={(event) => this.handleChange(event)} value={this.state.back}/>
-                <input type="submit"/>
+                <input type="submit" value="Create Card"/>
             </form>
           </div>
 

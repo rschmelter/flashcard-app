@@ -41,7 +41,7 @@ class DeckForm extends Component {
             <form onSubmit={this.handleSubmit}>
                     <label>Create Deck</label>
                 <input name="name" placeholder="Name" type="text" onChange={(event) => this.handleChange(event)} value={this.state.name}/>
-                <input type="submit"/>
+                <input type="submit" value="Create Deck"/>
             </form>
           </div>
 

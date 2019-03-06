@@ -29,6 +29,7 @@ class DeckList extends Component {
         
             
             {decks.map(deck => <Deck key={deck.id} deckId={deck.id} deck={deck.name}/>)}
+            
           </div>
 
       );

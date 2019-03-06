@@ -9,11 +9,17 @@ export default function cardReducer(state = initialState, action) {
         case 'CREATE_CARD':
             return {...state, all: [...state.all, action.payload]}
 
-        case 'FETCH_CARDS':
-    
+        case 'FETCH_CARDS':    
 
-        return {...state, all: action.payload}
+            return {...state, all: action.payload} 
+
+        case 'SORT_CARDS':
+            let sorted = state.all.sort(function(a, b) {
+                return a.front > b.front;
+            })
             
+            
+            return {...state, all: [...state.all, sorted]}
      
         default: return state
     }

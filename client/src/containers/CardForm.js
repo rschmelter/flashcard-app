@@ -15,7 +15,7 @@ class CardForm extends Component {
             back: ""
         };
     }
-
+ 
 
     handleChange = event => {
         const field = event.target.name
@@ -27,7 +27,9 @@ class CardForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        console.log('A')
         this.props.createCard(this.props.deckId, this.state)
+        console.log('B')
         this.setState({
             front: "",
             back: ""

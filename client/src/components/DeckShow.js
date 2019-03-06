@@ -8,12 +8,15 @@ import Header from "./Header"
 class DeckShow extends Component {
   render() {
 
+
+
     return (
     
       
         <div className="DeckShow">
             <Header/>
             <CardForm deckId={this.props.match.params.id}/>
+            
             <CardList deckId={this.props.match.params.id}/>
             <Card/>
         </div>

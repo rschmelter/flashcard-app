@@ -14,6 +14,7 @@ export const fetchCards = id => {
     }
 
     return dispatch => {
+
         fetch(`${baseUrl}/decks/${id}/cards`, data)
         .then(response => response.json())
         .then(cards => {
@@ -36,12 +37,15 @@ export const createCard = (id, card) => {
           
         },
         body: JSON.stringify(card)
-    }
+    }   
+    console.log('C')
 
     return dispatch => {
+    
         fetch(`${baseUrl}/decks/${id}/cards`, data)
         .then(response => response.json())
         .then(card => {
+            console.log('D')
             dispatch({
                 type: 'CREATE_CARD',
                 payload: card
@@ -49,6 +53,15 @@ export const createCard = (id, card) => {
         })
         .catch(err => err)
     }
-    
+    console.log('E')
+
+}
+
+export const sortCards = () => {
+    return dispatch => {
+        dispatch({
+            type: 'SORT_CARDS'
+        })
+    }
 
 }
